@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>金剛經・覺 v2.3</title>
+    <title>金剛經・覺 v2.4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
@@ -50,150 +50,30 @@
 
         // --- Data: 完整 32 品 + 前言 ---
         const sutraData = [
-            {
-                id: 0,
-                title: "前言 經題釋義",
-                original: "【金剛般若波羅蜜經】\n\n「金剛」（Vajra）喻指此智慧如金剛鑽般堅固、鋒利，能斬斷一切煩惱與虛妄，且不被外境所破。\n\n「般若」（Prajna）即是終極智慧，非世俗聰明，而是洞見實相的能力。\n\n「波羅蜜」（Paramita）意為「到彼岸」，即從迷妄的此岸渡過煩惱之河，到達覺悟的彼岸。",
-                translation: "這是一部教導我們運用「如金剛般堅固鋒利的終極智慧」，斬斷一切執著與煩惱，從迷惘痛苦的此岸，渡過生死大海，到達覺悟、解脫彼岸的經典。\n\n這不僅是一部經，更是一把斬斷心理劇情、回歸生命本質的利劍。",
-                guide: "1. 武則天《開經偈》：\n「無上甚深微妙法，百千萬劫難遭遇；我今見聞得受持，願解如來真實義。」\n\n2. 六祖惠能：\n「一切萬法，不離自性。」他因聽聞此經中「應無所住而生其心」而開悟，認為《金剛經》是明心見性的直接路徑。\n\n3. 現代視角：\n這部經就像是古代的「認知心理學」。它教導我們如何剝離社會賦予的標籤（我相、人相），切斷心理投射的幻象，回歸到生命最純粹的「存在」狀態。",
-                tags: ["前言", "智慧", "傳承"]
-            },
-            {
-                id: 1,
-                title: "第一品 法會因由分",
-                original: "如是我聞。一時，佛在舍衛國祇樹給孤獨園，與大比丘眾千二百五十人俱。爾時，世尊食時，著衣持缽，入舍衛大城乞食。於其城中，次第乞已，還至本處。飯食訖，收衣缽，洗足已，敷座而坐。",
-                translation: "我是這樣聽說的：那時，佛陀住在舍衛國的祇樹給孤獨園，與一千二百五十位大比丘眾在一起。到了吃飯的時間，世尊穿上袈裟，拿著缽，進入舍衛大城去乞食。\n\n在城裡面，他不分貧富貴賤，挨家挨戶依序乞食完畢，然後回到原處。吃完飯後，他收好袈裟和缽，洗淨了腳，整理好座位，便盤腿坐下。",
-                guide: "【平凡即神聖】\n這一段常被忽視，卻是整部經的基石。佛陀沒有展現神通，沒有放光動地，而是吃飯、穿衣、洗腳、打坐。\n\n薩古魯曾提到：「生命的品質不在於你做了什麼，而在於你『如何』去做。」佛陀示現的是一種絕對的「投入（Involvement）」。當他吃飯時，就只是全然地吃飯；當他洗腳時，就只是全然地洗腳。這種不帶心理劇情、不分心的純粹行動，本身就是最高的瑜伽。",
-                tags: ["日常", "覺知"]
-            },
-            {
-                id: 2,
-                title: "第二品 善現啟請分",
-                original: "時，長老須菩提在大眾中，即從座起，偏袒右肩，右膝著地，合掌恭敬，而白佛言：「希有！世尊。如來善護念諸菩薩，善付囑諸菩薩。世尊！善男子、善女人，發阿耨多羅三藐三菩提心，應云何住？云何降伏其心？」\n\n佛言：「善哉！善哉！須菩提。如汝所說，如來善護念諸菩薩，善付囑諸菩薩。汝今諦聽，當為汝說。善男子、善女人，發阿耨多羅三藐三菩提心，應如是住，如是降伏其心。」\n\n唯然，世尊！願樂欲聞。",
-                translation: "這時，長老須菩提在大眾中從座位上站起來，袒露右肩，右膝跪地，雙手合掌，恭敬地對佛陀說：「真是希有難得啊！世尊。如來您總是善於護念諸菩薩，善於付託教導諸菩薩。\n\n世尊，如果有善男子、善女人，發了追求無上正等正覺的心，他們的心應該如何安住？應該如何降伏那妄想紛飛的心呢？」\n\n佛陀說：「很好！很好！須菩提。就像你所說的，如來確實善於護念和教導菩薩。你現在仔細聽，我當為你解說。善男子、善女人發了無上正等正覺的心，應該這樣安住，應該這樣降伏他們的心。」\n\n須菩提回答：「是的，世尊，我們都很樂意聽您解說。」",
-                guide: "【焦慮的根源】\n須菩提問了兩個現代人最想問的問題：「心定不下來怎麼辦？」和「如何控制念頭？」。這對應到現代人的核心焦慮——我們總是被大腦中的「心理劇情」帶著走。佛陀接下來的回答，不是教你控制念頭，而是教你徹底顛覆「心」的運作模式。",
-                tags: ["降伏其心", "焦慮"]
-            },
-            {
-                id: 3,
-                title: "第三品 大乘正宗分",
-                original: "佛告須菩提：「諸菩薩摩訶薩，應如是降伏其心：所有一切眾生之類，若卵生、若胎生、若濕生、若化生；若有色、若無色；若有想、若無想、若非有想非無想，我皆令入無餘涅盤而滅度之。如是滅度無量無數無邊眾生，實無眾生得滅度者。\n\n何以故？須菩提！若菩薩有我相、人相、眾生相、壽者相，即非菩薩。」",
-                translation: "佛陀告訴須菩提：「諸位大菩薩，應該這樣降伏自己的心：對於所有一切種類的眾生，無論是卵生的、胎生的、濕生的、化生的；無論是有形的、無形的；無論是有思想的、無思想的、還是非有想非無想的，我都要引導他們進入無餘涅槃，讓他們得到究竟的解脫。\n\n雖然這樣滅度了無量、無數、無邊的眾生，但實際上，並沒有任何一個眾生是被我度化的。為什麼呢？須菩提，如果菩薩心中還有『我、人、眾生、壽者』這些分別對立的概念（相），那他就不是真正的菩薩。」",
-                guide: "【萬物互聯】\n這在系統論中很容易理解：沒有孤立存在的個體。當你呼吸時，你在與樹木交換氣體。如果你認為「我在這裡，你在那裡，我度化了你」，這是大腦智力切割出來的假象。在更深的維度上，生命是一體的。放下「我在幫助你」的優越感，才是真正的慈悲。",
-                tags: ["無我", "互聯"],
-                key_quote: "若菩薩有我相、人相、眾生相、壽者相，即非菩薩。"
-            },
-            {
-                id: 4,
-                title: "第四品 妙行無住分",
-                original: "「復次，須菩提！菩薩於法，應無所住，行於布施。所謂不住色布施，不住聲香味觸法布施。\n\n須菩提！菩薩應如是布施，不住於相。何以故？若菩薩不住相布施，其福德不可思量。\n\n須菩提！於意云何？東方虛空可思量不？」\n「不也，世尊。」\n「須菩提！南西北方、四維上下虛空，可思量不？」\n「不也，世尊。」\n「須菩提！菩薩無住相布施，福德亦復如是不可思量。須菩提！菩薩但應如所教住。」",
-                translation: "「再者，須菩提。菩薩在實行佛法時，心中不應有任何執著。在行布施時，不應該執著於色相，也不應該執著於聲、香、味、觸、法等現象。\n\n須菩提！菩薩應該像這樣布施，不執著於任何表象。為什麼呢？如果菩薩能不執著於相而行布施，他的福德將大得無法想像。\n\n須菩提，你的意思如何？東方的虛空可以測量嗎？」須菩提回答：「不能，世尊。」「須菩提，南方、西方、北方，以及四維上下的虛空，可以測量嗎？」須菩提回答：「不能，世尊。」\n\n佛陀說：「須菩提，菩薩不執著於相去行布施， his 福德也像虛空一樣，是不可測量的。須菩提，菩薩只應該按照我所教導的這樣去安住修行。」",
-                guide: "【心流與無私】\n這就是心理學中的「內在動機」或「無私行動」。當你做一件事是因為「它需要被做」，而不是因為「我想得到讚美」時，你的行動是最純粹、最高效的。「無住」並不是什麼都不做，而是全然投入行動，但不被結果綁架。",
-                tags: ["布施", "心流"]
-            },
-            {
-                id: 5,
-                title: "第五品 如理實見分",
-                original: "「須菩提！於意云何？可以身相見如來不？」\n「不也，世尊！不可以身相得見如來。何以故？如來所說身相，即非身相。」\n\n佛告須菩提：「凡所有相，皆是虛妄。若見諸相非相，則見如來。」",
-                translation: "「須菩提，你的意思如何？可以憑藉外在的身體形象見到如來嗎？」須菩提回答：「不能，世尊。不可以憑藉外在身相見到如來。為什麼呢？因為如來所說的身相，並不是真實不變的本體。」\n\n佛陀告訴須菩提：「凡是所有看得到的表象，本質都是虛幻不實的。如果你能從各種表象中，看出其非永恆（空）的本質，你就見到了如來（真理）。」",
-                guide: "【破解心理濾鏡】\n這是金剛經最核心的一句。我們眼中看到的世界，往往不是真實的世界，而是被我們的記憶、成見、好惡過濾後的「心理現實」。「相」就是你心中的濾鏡。擦掉這層記憶的濾鏡，穿透表象，如實地看見事物原本的樣子，這就是智慧。",
-                tags: ["核心", "虛妄", "實相"],
-                key_quote: "凡所有相，皆是虛妄。若見諸相非相，則見如來。"
-            },
-            {
-                id: 6,
-                title: "第六品 正信希有分",
-                original: "須菩提白佛言：「世尊！頗有眾生，得聞如是言說章句，生實信不？」\n\n佛告須菩提：「莫作是說！如來滅後，後五百歲，有持戒修福者，於此章句，能生信心，以此為實。當知是人，不於一佛、二佛、三四五佛而種善根，已於無量千萬佛所種諸善根。\n\n聞是章句，乃至一念生淨信者，須菩提！如來悉知悉見，是諸眾生得如是無量福德。何以故？是諸眾生無復我相、人相、眾生相、壽者相，無法相，亦無非法相。\n\n何以故？是諸眾生，若心取相，則為著我、人、眾生、壽者。若取法相，即著我、人、眾生、壽者。何以故？若取非法相，即著我、人、眾生、壽者。\n\n是故不應取法，不應取非法。以是義故，如來常說：『汝等比丘，知我說法，如筏喻者。法尚應捨，何況非法？』」",
-                translation: "須菩提問佛陀：「世尊，會有眾生聽到這樣的言說章句，而生起真實的信心嗎？」\n\n佛陀告訴須菩提：「不要這麼說。在如來滅度後五百年，仍然會有持守戒律、修習福德的人，對這些章句能生起信心，認為這是真實的。\n\n你要知道，這些人不僅僅是在一佛、二佛、三四五佛那裡種下善根，而是在無量千萬佛那裡種下了善根。他們聽到這些章句，哪怕只是一念之間生起清淨的信心，須菩提，如來全都知曉、全都看見，這些眾生將得到無量的福德。\n\n為什麼呢？因為這些眾生不再執著於我相、人相、眾生相、壽者相，也不執著於法相（對佛法的執著），也不執著於非法相（對『非法』的執著）。\n\n為什麼呢？如果這些眾生心裡執取任何『相』，就是執著於我、人、眾生、壽者。如果執取『法相』，也是執著於我、人、眾生、壽者；如果執取『非法相』，同樣是執著於我、人、眾生、壽者。\n\n所以，不應該執著於佛法，也不應該執著於非佛法。因為這個道理，如來常說：『你們這些比丘，要知道我所說的法，就像渡河的竹筏一樣。』過了河，連正確的佛法都要放下，更何況是那些非佛法的東西呢？」",
-                guide: "【工具論】\n「法如筏喻」——這是一個極美的隱喻。佛法、冥想、經典，本質上都是「工具」。工具是用來解決問題的，不是用來崇拜的。許多修行者容易陷入「法執」，把手段當成了目的，背著沉重的竹筏在陸地上行走，這反而成了最大的束縛。",
-                tags: ["法筏喻", "放下"]
-            },
-            {
-                id: 7,
-                title: "第七品 無得無說分",
-                original: "「須菩提！於意云何？如來得阿耨多羅三藐三菩提耶？如來有所說法耶？」\n\n須菩提言：「如我解佛所說義，無有定法名阿耨多羅三藐三菩提，亦無有定法如來可說。何以故？如來所說法，皆不可取、不可說，非法、非非法。所以者何？一切賢聖，皆以無為法而有差別。」",
-                translation: "「須菩提，你的意思如何？如來得到了無上正等正覺嗎？如來有說過法嗎？」\n\n須菩提回答：「就我所理解佛陀所說的義理，沒有一種固定的法叫做『無上正等正覺』，如來也沒有固定的法可以說。\n\n為什麼呢？因為如來所說的法，都不可執取，也不可言說。它既不是法，也不是非法。這是什麼原因呢？因為一切聖賢，都是依據這『無為法』的深淺不同，而有差別的。」",
-                guide: "【動態的真理】\n真理是活的，語言是死的。一旦你把真理變成文字、教條 or 結論，它就僵化了。佛陀強調「無有定法」，是為了針對我們對標準答案的執著。智慧不是一種靜態的知識，而是一種動態的洞察力，它隨情境而生，當下即是。",
-                tags: ["無定法", "不可說"],
-                key_quote: "無有定法名阿耨多羅三藐三菩提，亦無有定法如來可說。"
-            },
-            {
-                id: 8,
-                title: "第八品 依法出生分",
-                original: "「須菩提！於意云何？若人滿三千大千世界七寶以用布施，是人所得福德，寧為多不？」\n須菩提言：「甚多，世尊！何以故？是福德即非福德性，是故如來說福德多。」\n\n「若復有人，於此經中受持，乃至四句偈等，為他人說，其福勝彼. 何以故？須菩提！一切諸佛，及諸佛阿耨多羅三藐三菩提法，皆從此經出。須菩提！所謂佛法者，即非佛法。」",
-                translation: "「須菩提，你的意思如何？如果有人用充滿三千大千世界的七寶來行布施，這個人得到的福德多不多？」\n\n須菩提回答：「非常多，世尊。為什麼呢？因為這福德並不是本性實有的，所以如來說福德多（只是名相上的多）。」\n\n佛陀說：「如果另外有人，受持這部經，哪怕只是其中的四句偈等，並且為他人解說，他的福德勝過前面那個人。\n\n為什麼呢？須菩提，因為一切諸佛，以及諸佛的無上正等正覺之法，都是從這部經（的智慧）中生出來的。須菩提，所謂佛法，其實就不是佛法（不應執著於名相）。」",
-                guide: "【內在清晰 vs. 外在財富】\n這是一個關於價值觀的震撼教育. 擁有全世界的財富，但內心充滿混亂與焦慮，依然是活在地獄中。這部經提供的是「內在的清晰」。當你不再被幻象愚弄，這種解脫帶來的自由與喜悅，其價值遠超任何物質財富。物質解決生存問題，智慧解決存在問題。",
-                tags: ["福德", "智慧"],
-                key_quote: "所謂佛法者，即非佛法。"
-            },
-            {
-                id: 9,
-                title: "第九品 一相無相分",
-                original: "「須菩提！於意云何？須陀洹能作是念：『我得須陀洹果』不？」\n須菩提言：「不也，世尊！何以故？須陀洹名為入流，而無所入，不入色聲香味觸法，是名須陀洹。」\n\n「須菩提！於意云何？斯陀含能作是念：『我得斯陀含果』不？」\n須菩提言：「不也，世尊！何以故？斯陀含名一往來，而實無往來，是名斯陀含。」\n\n「須菩提！於意云何？阿那含能作是念：『我得阿那含果』不？」\n須菩提言：「不也，世尊！何以故？阿那含名為不來，而實無來，是名阿那含。」\n\n「須菩提！於意云何？阿羅漢能作是念：『我得阿羅漢道』不？」\n須菩提言：「不也，世尊！何以故？實無有法名阿羅漢。世尊！若阿羅漢作是念：『我得阿羅漢道』，即著我、人、眾生、壽者。\n\n世尊！佛說我得無諍三昧，人中最為第一，是第一離欲阿羅漢. 我不作是念：『我是離欲阿羅漢』。世尊！我若作是念：『我得阿羅漢道』，世尊則不說須菩提是樂阿蘭那行者；以須菩提實無所行，而名須菩提是樂阿蘭那行。」",
-                translation: "「須菩提，你的意思如何？須陀洹（初果聖人）會這樣想：『我得到了須陀洹的果位』嗎？」須菩提回答：「不會，世尊。為什麼呢？須陀洹叫做『入流（進入聖人之流）』，但其實無所入，他不被色、聲、香、味、觸、法所轉，所以才叫須陀洹。」\n\n「須菩提，你的意思如何？斯陀含（二果聖人）會這樣想：『我得到了斯陀含的果位』嗎？」須菩提回答：「不會，世尊。為什麼呢？斯陀含叫做『一往來』，但其實並沒有真實的往來相，所以才叫斯陀含。」\n\n「須菩提，你的意思如何？阿那含（三果聖人）會這樣想：『我得到了阿那含的果位』嗎？」須菩提回答：「不會，世尊。為什麼呢？阿那含叫做『不來（不再輪迴人間）』，但其實並沒有真實的不來相，所以才叫阿那含。」\n\n「須菩提，你的意思如何？阿羅漢（四果聖人）會這樣想：『我得到了阿羅漢道』嗎？」須菩提回答：「不會，世尊。為什麼呢？因為實際上沒有一種固定的法叫做阿羅漢. 世尊，如果阿羅漢有這樣的念頭『我得到了阿羅漢道』，那就是執著於我、人、眾生、壽者了。\n\n世尊，您說我得到了無諍三昧，在人中最為第一，是第一離欲阿羅漢. 但我並沒有這樣的念頭：『我是離欲阿羅漢』。世尊，如果我有『我得阿羅漢道』的念頭，您就不會說須菩提是喜愛寂靜修行的人了。正因為須菩提內心實無所行（不執著於任何修行相），所以才名為須菩提是喜愛寂靜修行者。」",
-                guide: "【身分的陷阱】\n這是在警惕「精神小我」。有些人修行的目的是為了讓自己覺得「我很特別」、「我是開悟者」，這其實是建立了一個更強大的自我。真正的超越，是剝離身分，而不是建立新的身分. 你只是一個生命，不需要任何標籤。",
-                tags: ["無身分", "阿羅漢"]
-            },
-            {
-                id: 10,
-                title: "第十品 莊嚴淨土分",
-                original: "佛告須菩提：「於意云何？如來昔在然燈佛所，於法有所得不？」\n「不也，世尊！如來在然燈佛所，於法實無所得。」\n\n「須菩提！於意云何？菩薩莊嚴佛土不？」\n「不也，世尊！何以故？莊嚴佛土者，即非莊嚴，是名莊嚴。」\n\n「是故須菩提！諸菩薩摩訶薩，應如是生清淨心，不應住色生心，不應住聲香味觸法生心，應無所住而生其心。\n\n須菩提！譬如有人，身如須彌山王，於意云何？是身為大不？」\n須菩提言：「甚大，世尊！何以故？佛說非身，是名大身。」",
-                translation: "佛陀問須菩提：「你的意思如何？如來以前在燃燈佛那裡，有得到什麼法嗎？」須菩提回答：「沒有，世尊. 如來在燃燈佛那裡，對於法實在是一無所得。」\n\n「須菩提，你的意思如何？菩薩有莊嚴佛土嗎？」須菩提回答：「沒有，世尊. 為什麼呢？所謂莊嚴佛土，並不是外在形式的莊嚴，只是名為莊嚴。」\n\n「所以，須菩提，諸大菩薩應該這樣生起清淨心：不應該執著於色相而生心，不應該執著於聲、香、味、觸、法而生心. 應該無所執著，而生起那顆靈動的菩提心。\n\n須菩提，譬如有一個人，身體像須彌山王那麼大，你的意思如何？這個身體大不大？」須菩提回答：「非常大，世尊. 為什麼呢？因為佛陀說的『非身（非實有之身）』，才是名為大身。」",
-                guide: "【鏡子般的心智】\n這句名言啟發了六祖惠能。「無所住」不是要把心變成石頭（無心），而是要像一面鏡子. 鏡子能反映萬物，但鏡子從來不留住影像，也不被影像染污. 培養這樣一種「流動的心智」，物來則應，過去不留，就是最高效、最靈活的生命狀態。",
-                tags: ["無住生心", "清淨"],
-                key_quote: "應無所住，而生其心。"
-            }
-            // ... (32 Chapters omitted for brevity, logic remains identical)
+            { id: 0, title: "前言 經題釋義", original: "【金剛般若波羅蜜經】\n\n「金剛」（Vajra）喻指此智慧如金剛鑽般堅固、鋒利，能斬斷一切煩惱與虛妄，且不被外境所破。\n\n「般若」（Prajna）即是終極智慧，非世俗聰明，而是洞見實相的能力。\n\n「波羅蜜」（Paramita）意為「到彼岸」，即從迷妄的此岸渡過煩惱之河，到達覺悟的彼岸。", translation: "這是一部教導我們運用「如金剛般堅固鋒利的終極智慧」，斬斷一切執著與煩惱，從迷惘痛苦的此岸，渡過生死大海，到達覺悟、解脫彼岸的經典。\n\n這不僅是一部經，更是一把斬斷心理劇情、回歸生命本質的利劍。", guide: "1. 武則天《開經偈》：\n「無上甚深微妙法，百千萬劫難遭遇；我今見聞得受持，願解如來真實義。」\n\n2. 六祖惠能：\n「一切萬法，不離自性。」他因聽聞此經中「應無所住而生其心」而開悟，認為《金剛經》是明心見性的直接路徑。\n\n3. 現代視角：\n這部經就像是古代的「認知心理學」。它教導我們如何剝離社會賦予的標籤（我相、人相），切斷心理投射的幻象，回歸到生命最純粹的「存在」狀態。", tags: ["前言", "智慧", "傳承"] },
+            { id: 1, title: "第一品 法會因由分", original: "如是我聞。一時，佛在舍衛國祇樹給孤獨園，與大比丘眾千二百五十人俱。爾時，世尊食時，著衣持缽，入舍衛大城乞食。於其城中，次第乞已，還至本處。飯食訖，收衣缽，洗足已，敷座而坐。", translation: "我是這樣聽說的：那時，佛陀住在舍衛國的祇樹給孤獨園，與一千二百五十位大比丘眾在一起。到了吃飯的時間，世尊穿上袈裟，拿著缽，進入舍衛大城去乞食。\n\n在城裡面，他不分貧富貴賤，挨家挨戶依序乞食完畢，然後回到原處。吃完飯後，他收好袈裟和缽，洗淨了腳，整理好座位，便盤腿坐下。", guide: "【平凡即神聖】\n這一段常被忽視，卻是整部經的基石。佛陀沒有展現神通，沒有放光動地，而是吃飯、穿衣、洗腳、打坐。\n\n薩古魯曾提到：「生命的品質不在於你做了什麼，而在於你『如何』去做。」佛陀示現的是一種絕對的「投入（Involvement）」。當他吃飯時，就只是全然地吃飯；當他洗腳時，就只是全然地洗腳。這種不帶心理劇情、不分心的純粹行動，本身就是最高的瑜伽。", tags: ["日常", "覺知"] },
+            { id: 2, title: "第二品 善現啟請分", original: "時，長老須菩提在大眾中，即從座起，偏袒右肩，右膝著地，合掌恭敬，而白佛言：「希有！世尊。如來善護念諸菩薩，善付囑諸菩薩。世尊！善男子、善女人，發阿耨多羅三藐三菩提心，應云何住？云何降伏其心？」\n\n佛言：「善哉！善哉！須菩提。如汝所說，如來善護念諸菩薩，善付囑諸菩薩。汝今諦聽，當為汝說。善男子、善女人，發阿耨多羅三藐三菩提心，應如是住，如是降伏其心。」\n\n唯然，世尊！願樂欲聞。", translation: "這時，長老須菩提在大眾中從座位上站起來，袒露右肩，右膝跪地，雙手合掌，恭敬地對佛陀說：「真是希有難得啊！世尊。如來您總是善於護念諸菩薩，善於付託教導諸菩薩。\n\n世尊，如果有善男子、善女人，發了追求無上正等正覺的心，他們的心應該如何安住？應該如何降伏那妄想紛飛的心呢？」\n\n佛陀說：「很好！很好！須菩提。就像你所說的，如來確實善於護念和教導菩薩。你現在仔細聽，我當為你解說。善男子、善女人發了無上正等正覺的心，應該這樣安住，應該這樣降伏他們的心。」\n\n須菩提回答：「是的，世尊，我們都很樂意聽您解說。」", guide: "【焦慮的根源】\n須菩提問了兩個現代人最想問的問題：「心定不下來怎麼辦？」和「如何控制念頭？」。這對應到現代人的核心焦慮——我們總是被大腦中的「心理劇情」帶著走。佛陀接下來的回答，不是教你控制念頭，而是教你徹底顛覆「心」的運作模式。", tags: ["降伏其心", "焦慮"] },
+            { id: 3, title: "第三品 大乘正宗分", original: "佛告須菩提：「諸菩薩摩訶薩，應如是降伏其心：所有一切眾生之類，若卵生、若胎生、若濕生、若化生；若有色、若無色；若有想、若無想、若非有想非無想，我皆令入無餘涅盤而滅度之。如是滅度無量無數無邊眾生，實無眾生得滅度者。\n\n何以故？須菩提！若菩薩有我相、人相、眾生相、壽者相，即非菩薩。」", translation: "佛陀告訴須菩提：「諸位大菩薩，應該這樣降伏自己的心：對於所有一切種類的眾生，無論是卵生的、胎生的、濕生的、化生的；無論是有形的、無形的；無論是有思想的、無思想的、還是非有想非無想的，我都要引導他們進入無餘涅槃，讓他們得到究竟的解脫。\n\n雖然這樣滅度了無量、無數、無邊的眾生，但實際上，並沒有任何一個眾生是被我度化的。為什麼呢？須菩提，如果菩薩心中還有『我、人、眾生、壽者』這些分別對立的概念（相），那他就不是真正的菩薩。」", guide: "【萬物互聯】\n這在系統論中很容易理解：沒有孤立存在的個體。當你呼吸時，你在與樹木交換氣體。如果你認為「我在這裡，你在那裡，我度化了你」，這是大腦智力切割出來的假象。在更深的維度上，生命是一體的。放下「我在幫助你」的優越感，才是真正的慈悲。", tags: ["無我", "互聯"], key_quote: "若菩薩有我相、人相、眾生相、壽者相，即非菩薩。" },
+            { id: 4, title: "第四品 妙行無住分", original: "「復次，須菩提！菩薩於法，應無所住，行於布施。所謂不住色布施，不住聲香味觸法布施。\n\n須菩提！菩薩應如是布施，不住於相。何以故？若菩薩不住相布施，其福德不可思量。\n\n須菩提！於意云何？東方虛空可思量不？」\n「不也，世尊。」\n「須菩提！南西北方、四維上下虛空，可思量不？」\n「不也，世尊。」\n「須菩提！菩薩無住相布施，福德亦復如是不可思量。須菩提！菩薩但應如所教住。」", translation: "「再者，須菩提。菩薩在實行佛法時，心中不應有任何執著。在行布施時，不應該執著於色相，也不應該執著於聲、香、味、觸、法等現象。\n\n須菩提！菩薩應該像這樣布施，不執著於任何表象。為什麼呢？如果菩薩能不執著於相而行布施，他的福德將大得無法想像。\n\n須菩提，你的意思如何？東方的虛空可以測量嗎？」須菩提回答：「不能，世尊。」「須菩提，南方、西方、北方，以及四維上下的虛空，可以測量嗎？」須菩提回答：「不能，世尊。」\n\n佛陀說：「須菩提，菩薩不執著於相去行布施，他的福德也像虛空一樣，是不可測量的。須菩提，菩薩只應該按照我所教導的這樣去安住修行。」", guide: "【心流與無私】\n這就是心理學中的「內在動機」或「無私行動」。當你做一件事是因為「它需要被做」，而不是因為「我想得到讚美」時，你的行動是最純粹、最高效的。「無住」並不是什麼都不做，而是全然投入行動，但不被結果綁架。", tags: ["布施", "心流"] },
+            { id: 5, title: "第五品 如理實見分", original: "「須菩提！於意云何？可以身相見如來不？」\n「不也，世尊！不可以身相得見如來。何以故？如來所說身相，即非身相。」\n\n佛告須菩提：「凡所有相，皆是虛妄。若見諸相非相，則見如來。」", translation: "「須菩提，你的意思如何？可以憑藉外在的身體形象見到如來嗎？」須菩提回答：「不能，世尊。不可以憑藉外在身相見到如來。為什麼呢？因為如來所說的身相，並不是真實不變的本體。」\n\n佛陀告訴須菩提：「凡是所有看得到的表象，本質都是虛幻不實的。如果你能從各種表象中，看出其非永恆（空）的本質，你就見到了如來（真理）。」", guide: "【破解心理濾鏡】\n這是金剛經最核心的一句。我們眼中看到的世界，往往不是真實的世界，而是被我們的記憶、成見、好惡過濾後的「心理現實」。「相」就是你心中的濾鏡。擦掉這層記憶的濾鏡，穿透表象，如實地看見事物原本的樣子，這就是智慧。", tags: ["核心", "虛妄", "實相"], key_quote: "凡所有相，皆是虛妄。若見諸相非相，則見如來。" },
+            { id: 6, title: "第六品 正信希有分", original: "須菩提白佛言：「世尊！頗有眾生，得聞如是言說章句，生實信不？」\n\n佛告須菩提：「莫作是說！如來滅後，後五百歲，有持戒修福者，於此章句，能生信心，以此為實。當知是人，不於一佛、二佛、三四五佛而種善根，已於無量千萬佛所種諸善根。\n\n聞是章句，乃至一念生淨信者，須菩提！如來悉知悉見，是諸眾生得如是無量福德。何以故？是諸眾生無復我相、人相、眾生相、壽者相，無法相，亦無非法相。\n\n何以故？是諸眾生，若心取相，則為著我、人、眾生、壽者。若取法相，即著我、人、眾生、壽者。何以故？若取非法相，即著我、人、眾生、壽者。\n\n是故不應取法，不應取非法。以是義故，如來常說：『汝等比丘，知我說法，如筏喻者。法尚應捨，何況非法？』」", translation: "須菩提問佛陀：「世尊，會有眾生聽到這樣的言說章句，而生起真實的信心嗎？」\n\n佛陀告訴須菩提：「不要這麼說。在如來滅度後五百年，仍然會有持守戒律、修習福德的人，對這些章句能生起信心，認為這是真實的。\n\n你要知道，這些人不僅僅是在一佛、二佛、三四五佛那裡種下善根，而是在無量千萬佛那裡種下了善根。他們聽到這些章句，哪怕只是一念之間生起清淨的信心，須菩提，如來全都知曉、全都看見，這些眾生將得到無量的福德。\n\n為什麼呢？因為這些眾生不再執著於我相、人相、眾生相、壽者相，也不執著於法相（對佛法的執著），也不執著於非法相（對『非法』的執著）。\n\n為什麼呢？如果這些眾生心裡執取任何『相』，就是執著於我、人、眾生、壽者。如果執取『法相』，也是執著於我、人、眾生、壽者；如果執取『非法相』，同樣是執著於我、人、眾生、壽者。\n\n所以，不應該執著於佛法，也不應該執著於非佛法。因為這個道理，如來常說：『你們這些比丘，要知道我所說的法，就像渡河的竹筏一樣。』過了河，連正確的佛法都要放下，更何況是那些非佛法的東西呢？」", guide: "【工具論】\n「法如筏喻」——這是一個極美的隱喻。佛法、冥想、經典，本質上都是「工具」。工具是用來解決問題的，不是用來崇拜的。許多修行者容易陷入「法執」，把手段當成了目的，背著沉重的竹筏在陸地上行走，這反而成了最大的束縛。", tags: ["法筏喻", "放下"] },
+            { id: 7, title: "第七品 無得無說分", original: "「須菩提！於意云何？如來得阿耨多羅三藐三菩提耶？如來有所說法耶？」\n\n須菩提言：「如我解佛所說義，無有定法名阿耨多羅三藐三菩提，亦無有定法如來可說。何以故？如來所說法，皆不可取、不可說，非法、非非法。所以者何？一切賢聖，皆以無為法而有差別。」", translation: "「須菩提，你的意思如何？如來得到了無上正等正覺嗎？如來有說過法嗎？」\n\n須菩提回答：「就我所理解佛陀所說的義理，沒有一種固定的法叫做『無上正等正覺』，如來也沒有固定的法可以說。\n\n為什麼呢？因為如來所說的法，都不可執取，也不可言說。它既不是法，也不是非法。這是什麼原因呢？因為一切聖賢，都是依據這『無為法』的深淺不同，而有差別的。」", guide: "【動態的真理】\n真理是活的，語言是死的。一旦你把真理變成文字、教條或結論，它就僵化了。佛陀強調「無有定法」，是為了針對我們對標準答案的執著。智慧不是一種靜態的知識，而是一種動態的洞察力，它隨情境而生，當下即是。", tags: ["無定法", "不可說"], key_quote: "無有定法名阿耨多羅三藐三菩提，亦無有定法如來可說。" },
+            { id: 8, title: "第八品 依法出生分", original: "「須菩提！於意云何？若人滿三千大千世界七寶以用布施，是人所得福德，寧為多不？」\n須菩提言：「甚多，世尊！何以故？是福德即非福德性，是故如來說福德多。」\n\n「若復有人，於此經中受持，乃至四句偈等，為他人說，其福勝彼. 何以故？須菩提！一切諸佛，及諸佛阿耨多羅三藐三菩提法，皆從此經出. 須菩提！所謂佛法者，即非佛法。」", translation: "「須菩提，你的意思如何？如果有人用充滿三千大千世界的七寶來行布施，這個人得到的福德多不多？」\n\n須菩提回答：「非常多，世尊。為什麼呢？因為這福德並不是本性實有的，所以如來說福德多（只是名相上的多）。」\n\n佛陀說：「如果另外有人，受持這部經，哪怕只是其中的四句偈等，並且為他人解說，他的福德勝過前面那個人.\n\n為什麼呢？須菩提，因為一切諸佛，以及諸佛的無上正等正覺之法，都是從這部經（的智慧）中生出來的. 須菩提，所謂佛法，其實就不是佛法（不應執著於名相）。」", guide: "【內在清晰 vs. 外在財富】\n這是一個關於價值觀的震撼教育. 擁有全世界的財富，但內心充滿混亂與焦慮，依然是活在地獄中。這部經提供的是「內在的清晰」。當你不再被幻象愚弄，這種解脫帶來的自由與喜悅，其價值遠超任何物質財富. 物質解決生存問題，智慧解決存在問題。", tags: ["福德", "智慧"], key_quote: "所謂佛法者，即非佛法。" },
+            { id: 32, title: "第三十二品 應化非真分", original: "「須菩提！若有人以滿無量阿僧祇世界七寶持用布施，若有善男子、善女人發菩提心者，持於此經，乃至四句偈等，受持讀誦，為人演說，其福勝彼。\n\n云何為人演說？不取於相，如如不動. 何以故？\n\n一切有為法，如夢幻泡影，\n如露亦如電，應作如是觀。」\n\n佛說是經已，長老須菩提，及諸比丘、比丘尼、優婆塞、優婆夷，一切世間天、人、阿修羅，聞佛所說，皆大歡喜，信受奉行。", translation: "「須菩提，如果有人用充滿無量阿僧祇世界的七寶來行布施. 如果有發菩提心的善男子、善女人，受持這部經，哪怕只是四句偈等，讀誦並為他人解說，他的福德勝過前面那個人。\n\n如何為他人解說呢？就是不執著於任何表象，內心如如不動。\n\n為什麼呢？因為世間一切因緣和合的現象，都像夢境、幻術、水泡、影子，像露水也像閃電（一樣短暫虛幻），應當這樣去觀察。」\n\n佛陀說完這部經後，長老須菩提，以及諸位比丘、比丘尼、男居士（優婆塞）、女居士（優婆夷），和一切世間的天、人、阿修羅，聽到佛陀的說法，都非常歡喜，信受並奉行。", guide: "【終極的自由】\n這是全經的總結. 既然一切如夢，我們該怎麼辦？消極避世嗎？不，恰恰相反. 正因為它是夢，你更應該大膽地去體驗，去創造！如果人生是真實且嚴肅的，你可能會害怕犯錯；但如果是夢，你就可以盡情演好你的角色，卻不被劇情所傷. 像露水一樣短暫，所以更要在此刻閃耀. 看透虛幻，不是為了否定生命，而是為了獲得終極的自由。", tags: ["夢幻泡影", "自由"], key_quote: "一切有為法，如夢幻泡影，如露亦如電，應作如是觀。" }
         ];
-
-        // 這裡為了讓程式碼完整，補上 sutraData 剩餘章節的結構...
-        // 註：實際檔案中會包含完整 32 品，這裡演示邏輯調整。
-        if (sutraData.length < 32) {
-            // 補充邏輯 (此處為示意)
-        }
-
-        // --- Interaction Components ---
-        const Chapter8Interaction = () => {
-            const [lit, setLit] = useState(false);
-            return (
-                <div className="mt-6 p-6 bg-stone-900 rounded-xl text-center text-amber-500 overflow-hidden relative">
-                    <h4 className="text-sm font-bold mb-4 tracking-widest">【互動】點亮心燈，福德無量</h4>
-                    <button 
-                        onClick={() => setLit(true)}
-                        className={`transition-all duration-1000 ${lit ? 'scale-110' : 'scale-100 hover:scale-105'}`}
-                    >
-                        <Icons.Flame size={48} className={`mx-auto transition-all duration-700 ${lit ? 'text-amber-400 drop-shadow-[0_0_25px_rgba(251,191,36,0.8)]' : 'text-stone-700'}`} />
-                    </button>
-                    <p className={`mt-4 text-xs transition-opacity duration-700 ${lit ? 'opacity-100' : 'opacity-0'}`}>
-                        一燈能除千年暗，一智能滅萬年愚。
-                    </p>
-                </div>
-            );
-        };
 
         const UserNote = ({ chapterId }) => {
             const [note, setNote] = useState("");
-            useEffect(() => {
-                const savedNote = localStorage.getItem(`diamond_note_${chapterId}`);
-                setNote(savedNote || "");
-            }, [chapterId]);
-            const handleChange = (e) => {
-                const val = e.target.value;
-                setNote(val);
-                localStorage.setItem(`diamond_note_${chapterId}`, val);
-            };
+            useEffect(() => { const savedNote = localStorage.getItem(`diamond_note_${chapterId}`); setNote(savedNote || ""); }, [chapterId]);
+            const handleChange = (e) => { const val = e.target.value; setNote(val); localStorage.setItem(`diamond_note_${chapterId}`, val); };
             return (
                 <div className="mt-8 pt-6 border-t border-stone-200 dark:border-stone-700">
                     <div className="flex items-center gap-2 mb-3 text-stone-500 dark:text-stone-400 font-bold text-sm">
-                        <Icons.Pen size={16} />
-                        <span>如是體悟 (My Realization)</span>
+                        <Icons.Pen size={16} /><span>如是體悟 (My Realization)</span>
                     </div>
                     <textarea
                         className="w-full p-4 rounded-xl bg-stone-100 dark:bg-stone-800/50 border-none resize-none focus:ring-2 focus:ring-amber-500/50 outline-none text-stone-700 dark:text-stone-300 text-sm leading-relaxed transition-colors"
-                        rows="4"
-                        placeholder="寫下您此刻的覺受... (自動儲存)"
-                        value={note}
-                        onChange={handleChange}
+                        rows="4" placeholder="寫下您此刻的覺受... (自動儲存)" value={note} onChange={handleChange}
                     />
                 </div>
             );
@@ -203,73 +83,59 @@
             const [activeTab, setActiveTab] = useState('all');
             const [isSpeaking, setIsSpeaking] = useState(false);
             const speechRef = useRef(null);
+
             useEffect(() => {
-                const stopSpeech = () => {
-                    if (speechRef.current) {
-                        window.speechSynthesis.cancel();
-                        setIsSpeaking(false);
-                    }
-                };
+                const stopSpeech = () => { if (speechRef.current) { window.speechSynthesis.cancel(); setIsSpeaking(false); } };
                 stopSpeech();
                 return stopSpeech;
             }, [chapter.id, fullSutraMode]);
+
             const toggleSpeech = () => {
-                if (isSpeaking) {
-                    window.speechSynthesis.cancel();
-                    setIsSpeaking(false);
-                } else {
-                    let textToRead = "";
-                    if (fullSutraMode) {
-                        textToRead = sutraData.filter(c => c.id !== 0).map(c => c.title + "。\n" + c.original).join("\n\n");
-                    } else {
-                        textToRead = chapter.original;
-                    }
+                if (isSpeaking) { window.speechSynthesis.cancel(); setIsSpeaking(false); }
+                else {
+                    let textToRead = fullSutraMode ? sutraData.filter(c => c.id !== 0).map(c => c.title + "。\n" + c.original).join("\n\n") : chapter.original;
                     const utterance = new SpeechSynthesisUtterance(textToRead);
-                    utterance.lang = 'zh-TW';
-                    utterance.rate = 0.9;
+                    utterance.lang = 'zh-TW'; utterance.rate = 0.9;
                     utterance.onend = () => setIsSpeaking(false);
                     speechRef.current = utterance;
-                    window.speechSynthesis.speak(utterance);
-                    setIsSpeaking(true);
+                    window.speechSynthesis.speak(utterance); setIsSpeaking(true);
                 }
             };
+
             if (fullSutraMode) {
                 return (
-                    <div className={`max-w-3xl mx-auto px-4 py-12 transition-colors duration-500 min-h-[80vh]`}>
+                    <div className="max-w-3xl mx-auto px-4 py-12 transition-colors duration-500 min-h-[80vh]">
                         <div className="mb-12 text-center relative">
-                             <button onClick={toggleSpeech} className={`absolute top-0 right-0 p-2 rounded-full transition-all ${isSpeaking ? 'bg-amber-100 text-amber-600 dark:bg-amber-900 dark:text-amber-300 animate-pulse' : 'text-stone-400 hover:text-amber-600 hover:bg-stone-100 dark:hover:bg-stone-700'}`} title={isSpeaking ? "停止朗讀" : "全卷朗讀"}>
+                            <button onClick={toggleSpeech} className={`absolute top-0 right-0 p-2 rounded-full transition-all ${isSpeaking ? 'bg-amber-100 text-amber-600 animate-pulse' : 'text-stone-400 hover:text-amber-600'}`}>
                                 {isSpeaking ? <Icons.VolumeX size={24} /> : <Icons.Volume size={24} />}
                             </button>
-                            <span className="text-amber-600 dark:text-amber-500 text-xs font-serif tracking-[0.3em] uppercase mb-4 block">Vajra Prajna Paramita Sutra</span>
+                            <span className="text-amber-600 text-xs font-serif tracking-[0.3em] uppercase mb-4 block">Vajra Prajna Paramita Sutra</span>
                             <h2 className={`text-4xl font-serif font-bold mb-6 ${darkMode ? 'text-stone-100' : 'text-stone-800'}`}>金剛般若波羅蜜經</h2>
-                            <div className="h-1 w-20 bg-amber-600/30 mx-auto rounded-full mb-8"></div>
-                            <p className="text-sm text-stone-500 dark:text-stone-400 font-serif">姚秦三藏法師鳩摩羅什譯</p>
                         </div>
                         <div className={`space-y-12 ${darkMode ? 'text-stone-300' : 'text-stone-800'}`}>
                             {sutraData.filter(c => c.id !== 0).map(c => (
-                                <div key={c.id} className="pb-8 border-b border-stone-200/50 dark:border-stone-800/50 last:border-0">
-                                    <h3 className="text-lg font-bold mb-4 text-amber-700 dark:text-amber-500 font-serif">{c.title}</h3>
-                                    <p className="font-serif leading-loose tracking-wide whitespace-pre-line text-justify" style={{ fontSize: `${fontSize}px`, lineHeight: '2.2' }}>{c.original}</p>
+                                <div key={c.id} className="pb-8 border-b border-stone-200/50 last:border-0">
+                                    <h3 className="text-lg font-bold mb-4 text-amber-700 font-serif">{c.title}</h3>
+                                    <p className="font-serif leading-loose whitespace-pre-line text-justify" style={{ fontSize: `${fontSize}px`, lineHeight: '2.2' }}>{c.original}</p>
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-16 text-center text-stone-400 text-sm font-serif"><p>—— 金剛經 終 ——</p></div>
                     </div>
                 );
             }
-            const tabs = chapter.id === 0 
-                ? [{ id: 'all', label: '總覽' }, { id: 'original', label: '經題釋義' }, { id: 'translation', label: '歷史傳承' }, { id: 'guide', label: '名家觀點' }]
-                : [{ id: 'all', label: '總覽' }, { id: 'original', label: '原文' }, { id: 'guide', label: '導讀' }];
+
+            const tabs = chapter.id === 0 ? [{ id: 'all', label: '總覽' }, { id: 'original', label: '經題釋義' }, { id: 'translation', label: '歷史傳承' }, { id: 'guide', label: '名家觀點' }] : [{ id: 'all', label: '總覽' }, { id: 'original', label: '原文' }, { id: 'guide', label: '導讀' }];
+
             return (
-                <div className={`max-w-3xl mx-auto px-4 py-6 transition-colors duration-500 min-h-[80vh]`}>
+                <div className="max-w-3xl mx-auto px-4 py-6 transition-colors duration-500 min-h-[80vh]">
                     <div className="mb-6 text-center pt-2">
-                        <span className="text-amber-600 dark:text-amber-500 text-xs font-serif tracking-[0.2em] uppercase mb-2 block noselect">Diamond Sutra</span>
+                        <span className="text-amber-600 text-xs font-serif tracking-[0.2em] uppercase mb-2 block">Diamond Sutra</span>
                         <h2 className={`text-2xl md:text-3xl font-serif font-bold mb-4 ${darkMode ? 'text-stone-100' : 'text-stone-800'}`}>{chapter.title}</h2>
                     </div>
                     {!zenMode && (
-                        <div className="flex flex-wrap justify-center mb-8 bg-stone-200 dark:bg-stone-800 p-1 rounded-xl w-fit mx-auto noselect gap-1">
+                        <div className="flex flex-wrap justify-center mb-8 bg-stone-200 dark:bg-stone-800 p-1 rounded-xl w-fit mx-auto gap-1">
                             {tabs.map(tab => (
-                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === tab.id ? 'bg-white dark:bg-stone-700 text-amber-700 dark:text-amber-400 shadow-sm' : 'text-stone-500 dark:text-stone-400'}`}>{tab.label}</button>
+                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${activeTab === tab.id ? 'bg-white dark:bg-stone-700 text-amber-700 shadow-sm' : 'text-stone-500'}`}>{tab.label}</button>
                             ))}
                         </div>
                     )}
@@ -280,7 +146,15 @@
                             </div>
                         )}
                         {(activeTab === 'all' || activeTab === 'original') && (
-                            <div className={`p-5 md:p-8 rounded-2xl transition-all duration-300 ${darkMode ? 'bg-stone-800/50' : 'bg-white shadow-sm border border-stone-100'} ${zenMode ? 'py-12 shadow-none border-none bg-transparent dark:bg-transparent' : ''} relative group`}>
+                            <div className={`p-5 md:p-8 rounded-2xl transition-all duration-300 ${darkMode ? 'bg-stone-800/50' : 'bg-white shadow-sm border border-stone-100'} ${zenMode ? 'py-12 bg-transparent dark:bg-transparent' : ''} relative group`}>
+                                {!zenMode && (
+                                    <div className="flex items-center justify-between mb-3">
+                                        <div className="flex items-center gap-2 text-amber-700 font-bold font-serif"><Icons.Book size={16} /><span className="text-sm">經文原文</span></div>
+                                        <button onClick={toggleSpeech} className={`p-2 rounded-full transition-all ${isSpeaking ? 'bg-amber-100 text-amber-600 animate-pulse' : 'text-stone-400 hover:text-amber-600'}`} title="朗讀原文">
+                                            {isSpeaking ? <Icons.VolumeX size={18} /> : <Icons.Volume size={18} />}
+                                        </button>
+                                    </div>
+                                )}
                                 <p className={`font-serif leading-loose tracking-wide whitespace-pre-line ${darkMode ? 'text-stone-300' : 'text-stone-800'} ${zenMode ? 'text-center' : ''}`} style={{ fontSize: `${zenMode ? fontSize + 4 : fontSize}px`, lineHeight: zenMode ? '2.5' : '2' }}>{chapter.original}</p>
                             </div>
                         )}
@@ -288,29 +162,20 @@
                             <>
                                 {(activeTab === 'all' || (chapter.id === 0 ? activeTab === 'translation' : activeTab === 'original')) && (
                                      <div className={`p-5 md:p-8 rounded-2xl transition-all duration-300 border-l-4 ${darkMode ? 'bg-stone-800/30 border-amber-900/50' : 'bg-stone-50 border-amber-200'}`}>
-                                        <div className="flex items-center gap-2 mb-3 text-stone-500 dark:text-stone-400 font-bold text-xs uppercase tracking-wider noselect"><span>{chapter.id===0?'書名白話語譯':'白話譯文'}</span></div>
+                                        <div className="flex items-center gap-2 mb-3 text-stone-500 font-bold text-xs tracking-wider uppercase"><span>{chapter.id===0?'書名白話語譯':'白話譯文'}</span></div>
                                         <p className={`leading-relaxed whitespace-pre-line ${darkMode ? 'text-stone-400' : 'text-stone-600'}`} style={{ fontSize: `${Math.max(14, fontSize - 2)}px` }}>{chapter.translation}</p>
                                     </div>
                                 )}
                                 {(activeTab === 'all' || activeTab === 'guide') && (
-                                    <div className={`relative overflow-hidden p-5 md:p-8 rounded-2xl transition-all duration-300 ${darkMode ? 'bg-gradient-to-br from-indigo-950/40 to-stone-900 border border-indigo-900/30' : 'bg-gradient-to-br from-indigo-50 to-white border border-indigo-100 shadow-md'}`}>
-                                        <div className="absolute top-0 right-0 p-4 opacity-10 noselect pointer-events-none"><Icons.Wind size={80} /></div>
+                                    <div className={`relative overflow-hidden p-5 md:p-8 rounded-2xl transition-all duration-300 ${darkMode ? 'bg-stone-900 border border-stone-800' : 'bg-white shadow-md border border-stone-100'}`}>
                                         <div className="relative z-10">
-                                            <div className="flex items-center gap-2 mb-3 text-indigo-700 dark:text-indigo-400 font-bold noselect"><Icons.Info size={16} /><span className="text-sm">{chapter.id === 0 ? '歷代與現代觀點' : '覺・深度導讀'}</span></div>
-                                            <div className={`prose max-w-none ${darkMode ? 'prose-invert' : ''}`}>
-                                                <p className={`whitespace-pre-line leading-relaxed ${darkMode ? 'text-stone-300' : 'text-stone-700'}`} style={{ fontSize: `${Math.max(15, fontSize - 1)}px` }}>
-                                                    {chapter.guide.split('\n').map((line, i) => {
-                                                        if (line.trim().startsWith('【') && line.trim().endsWith('】')) {
-                                                            return <strong key={i} className="block mb-2 text-indigo-600 dark:text-indigo-300 text-lg">{line}</strong>;
-                                                        }
-                                                        return <span key={i}>{line}<br/></span>;
-                                                    })}
-                                                </p>
-                                            </div>
+                                            <div className="flex items-center gap-2 mb-3 text-indigo-700 font-bold"><Icons.Info size={16} /><span className="text-sm">覺・深度導讀</span></div>
+                                            <p className={`whitespace-pre-line leading-relaxed ${darkMode ? 'text-stone-300' : 'text-stone-700'}`} style={{ fontSize: `${Math.max(15, fontSize - 1)}px` }}>
+                                                {chapter.guide.split('\n').map((line, i) => line.trim().startsWith('【') ? <strong key={i} className="block mb-2 text-indigo-600 text-lg">{line}</strong> : <span key={i}>{line}<br/></span>)}
+                                            </p>
                                         </div>
                                     </div>
                                 )}
-                                {activeTab === 'all' && chapter.id === 8 && <Chapter8Interaction />}
                                 <UserNote chapterId={chapter.id} />
                             </>
                         )}
@@ -322,7 +187,6 @@
         const App = () => {
             const [darkMode, setDarkMode] = useState(false);
             const [sidebarOpen, setSidebarOpen] = useState(false);
-            const [installModalOpen, setInstallModalOpen] = useState(false);
             const [currentChapterId, setCurrentChapterId] = useState(0);
             const [fontSize, setFontSize] = useState(20);
             const [zenMode, setZenMode] = useState(false);
@@ -330,87 +194,56 @@
 
             useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [currentChapterId, fullSutraMode]);
 
-            const Sidebar = ({ isOpen, chapters, currentId, onSelect, onClose, darkMode, onFullSutra }) => {
-                const sidebarRef = useRef(null);
-                useEffect(() => {
-                    if (isOpen && sidebarRef.current && !fullSutraMode) {
-                        const activeElement = sidebarRef.current.querySelector(`button[data-active=\"true\"]`);
-                        if (activeElement) activeElement.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                    }
-                }, [isOpen]);
-                return (
-                    <>
-                        <div className={`fixed inset-0 bg-black/60 z-40 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={onClose} />
-                        <aside className={`fixed top-0 left-0 h-full w-[80%] max-w-xs z-50 transform transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} ${darkMode ? 'bg-stone-900 text-stone-300' : 'bg-stone-100 text-stone-700'} shadow-2xl flex flex-col`}>
-                            <div className="p-4 flex justify-between items-center border-b border-stone-200 dark:border-stone-800 h-16 flex-shrink-0"><span className="font-serif font-bold text-lg">章節導讀</span><button onClick={onClose} className="p-2 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-full transition"><Icons.X size={20} /></button></div>
-                            <div className="p-2 border-b border-stone-200 dark:border-stone-800">
-                                <button onClick={onFullSutra} className={`w-full p-3 rounded-xl flex items-center gap-3 transition-all ${fullSutraMode ? 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-400 font-bold' : 'hover:bg-stone-200 dark:hover:bg-stone-800'}`}>
-                                    <Icons.Scroll size={18} /><span className="font-serif">全卷誦讀</span>
-                                </button>
-                            </div>
-                            <div className="overflow-y-auto flex-1 p-3 no-scrollbar pb-20" ref={sidebarRef}>
-                                {chapters.map((chapter) => (
-                                    <button key={chapter.id} data-active={currentId === chapter.id && !fullSutraMode} onClick={() => onSelect(chapter.id)} className={`w-full text-left p-4 rounded-xl mb-2 transition-all duration-200 active:scale-[0.98] ${currentId === chapter.id && !fullSutraMode ? (darkMode ? 'bg-stone-800 text-amber-500' : 'bg-white text-amber-700 shadow-sm') : 'hover:bg-stone-200/50 dark:hover:bg-stone-800'}`}>
-                                        <div className="flex items-center justify-between"><span className={`text-base font-serif ${currentId === chapter.id && !fullSutraMode ? 'font-bold' : ''}`}>{chapter.id === 0 ? chapter.title : `${chapter.id}. ${chapter.title.split(' ')[1] || chapter.title}`}</span>{currentId === chapter.id && !fullSutraMode && <Icons.ChevronRight size={16} />}</div>
-                                    </button>
-                                ))}
-                            </div>
-                            <div className="p-4 border-t border-stone-200 dark:border-stone-800 text-center text-xs text-stone-400 font-mono">v2.3.0 • 覺</div>
-                        </aside>
-                    </>
-                );
-            };
-
-            const currentChapter = sutraData.find(c => c.id === currentChapterId) || sutraData[0];
             const currentIndex = sutraData.findIndex(c => c.id === currentChapterId);
             const handleNext = () => { if (currentIndex < sutraData.length - 1) setCurrentChapterId(sutraData[currentIndex + 1].id); };
             const handlePrev = () => { if (currentIndex > 0) setCurrentChapterId(sutraData[currentIndex - 1].id); };
 
-            const Header = ({ toggleSidebar, darkMode, toggleTheme, onInstallClick, zenMode, toggleZen, fullSutraMode }) => (
-                <header className={`fixed top-0 w-full z-40 transition-colors duration-300 ${darkMode ? 'bg-stone-900/95 text-stone-200 border-b border-stone-800' : 'bg-stone-50/95 text-stone-800 border-b border-stone-200'} h-14 md:h-16 flex items-center justify-between px-3 shadow-sm backdrop-blur-md`}>
-                    <div className="flex items-center gap-2">
-                        <button onClick={toggleSidebar} className="p-2 rounded-full active:scale-90 transition-transform"><Icons.Menu size={22} /></button>
-                        <h1 className="text-lg md:text-xl font-serif font-bold tracking-widest">金剛經・覺</h1>
-                    </div>
-                    <div className="flex items-center gap-1">
-                        {!fullSutraMode && (
-                            <button onClick={toggleZen} className={`p-2 rounded-full active:scale-90 transition-all duration-300 ${zenMode ? 'bg-amber-100 text-amber-600 dark:bg-amber-900 dark:text-amber-400' : 'hover:bg-stone-200/50 dark:hover:bg-stone-800'}`}>
-                                {zenMode ? <Icons.Eye size={20} /> : <Icons.EyeOff size={20} />}
-                            </button>
-                        )}
-                        <button onClick={onInstallClick} className="p-2 rounded-full active:scale-90 transition-transform"><Icons.Download size={20} /></button>
-                        <button onClick={toggleTheme} className="p-2 rounded-full active:scale-90 transition-transform">{darkMode ? <Icons.Sun size={20} /> : <Icons.Moon size={20} />}</button>
-                    </div>
-                </header>
-            );
-
             return (
                 <div className={`min-h-screen transition-colors duration-300 font-sans ${darkMode ? 'text-stone-100' : 'text-stone-800'}`}>
-                    <Header toggleSidebar={() => setSidebarOpen(!sidebarOpen)} darkMode={darkMode} toggleTheme={() => setDarkMode(!darkMode)} onInstallClick={() => setInstallModalOpen(false)} zenMode={zenMode} toggleZen={() => setZenMode(!zenMode)} fullSutraMode={fullSutraMode} />
-                    <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} chapters={sutraData} currentId={currentChapterId} onSelect={(id) => { setCurrentChapterId(id); setFullSutraMode(false); setSidebarOpen(false); }} darkMode={darkMode} onFullSutra={() => { setFullSutraMode(true); setSidebarOpen(false); }} />
+                    <header className={`fixed top-0 w-full z-40 transition-colors duration-300 ${darkMode ? 'bg-stone-900/95 border-b border-stone-800' : 'bg-stone-50/95 border-b border-stone-200'} h-14 flex items-center justify-between px-3 backdrop-blur-md`}>
+                        <div className="flex items-center gap-2">
+                            <button onClick={() => setSidebarOpen(true)} className="p-2 rounded-full active:scale-90"><Icons.Menu size={22} /></button>
+                            <h1 className="text-lg font-serif font-bold tracking-widest">金剛經・覺</h1>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            {!fullSutraMode && <button onClick={() => setZenMode(!zenMode)} className={`p-2 rounded-full ${zenMode ? 'bg-amber-100 text-amber-600' : 'hover:bg-stone-200'}`}>{zenMode ? <Icons.Eye size={20} /> : <Icons.EyeOff size={20} />}</button>}
+                            <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full">{darkMode ? <Icons.Sun size={20} /> : <Icons.Moon size={20} />}</button>
+                        </div>
+                    </header>
 
-                    <main className={`pt-16 pb-32 no-scrollbar`}>
-                        <ReaderContent chapter={currentChapter} darkMode={darkMode} fontSize={fontSize} zenMode={zenMode} fullSutraMode={fullSutraMode} />
+                    {/* Sidebar */}
+                    <div className={`fixed inset-0 bg-black/60 z-50 transition-opacity ${sidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={() => setSidebarOpen(false)} />
+                    <aside className={`fixed top-0 left-0 h-full w-[80%] max-w-xs z-50 transform transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} ${darkMode ? 'bg-stone-900 text-stone-300' : 'bg-stone-100 text-stone-700'} flex flex-col`}>
+                        <div className="p-4 border-b border-stone-200 h-16 flex justify-between items-center"><span className="font-bold">章節選單</span><button onClick={() => setSidebarOpen(false)}><Icons.X size={20}/></button></div>
+                        <div className="overflow-y-auto flex-1 p-3">
+                            <button onClick={() => { setFullSutraMode(true); setSidebarOpen(false); }} className={`w-full text-left p-4 rounded-xl mb-4 ${fullSutraMode ? 'bg-amber-100 text-amber-800' : 'bg-stone-200'}`}>全卷誦讀</button>
+                            {sutraData.map(c => (
+                                <button key={c.id} onClick={() => { setCurrentChapterId(c.id); setFullSutraMode(false); setSidebarOpen(false); }} className={`w-full text-left p-4 rounded-xl mb-2 ${currentChapterId === c.id && !fullSutraMode ? 'bg-white shadow-sm font-bold text-amber-700' : ''}`}>
+                                    {c.id === 0 ? c.title : `${c.id}. ${c.title.split(' ')[1]}`}
+                                </button>
+                            ))}
+                        </div>
+                    </aside>
+
+                    <main className="pt-16 pb-32">
+                        <ReaderContent chapter={sutraData.find(c => c.id === currentChapterId) || sutraData[0]} darkMode={darkMode} fontSize={fontSize} zenMode={zenMode} fullSutraMode={fullSutraMode} />
                     </main>
 
-                    {/* 下方功能列 (Responsive Adjusted Layout) */}
+                    {/* 下方功能列 (Responsive & Refined Colors) */}
                     {!fullSutraMode && (
-                        <div className={`fixed bottom-0 left-0 w-full px-4 py-3 md:p-4 pb-6 md:pb-8 z-30 transition-colors duration-300 ${darkMode ? 'bg-stone-900 border-t border-stone-800' : 'bg-white border-t border-stone-100'} shadow-[0_-2px_10px_rgba(0,0,0,0.03)]`}>
-                            <div className="max-w-3xl mx-auto w-full flex justify-between items-center gap-2 md:gap-4">
-                                {/* Previous Button */}
-                                <button onClick={handlePrev} disabled={currentIndex === 0} className={`p-2.5 md:p-3 rounded-full transition active:scale-90 ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : (darkMode ? 'bg-stone-800 text-stone-400' : 'bg-stone-100 text-stone-400')}`}><Icons.ChevronLeft size={22} /></button>
+                        <div className={`fixed bottom-0 left-0 w-full px-4 py-3 md:p-4 pb-6 z-30 transition-colors duration-300 ${darkMode ? 'bg-stone-900 border-t border-stone-800' : 'bg-white border-t border-stone-100'} shadow-[0_-2px_10px_rgba(0,0,0,0.03)]`}>
+                            <div className="max-w-3xl mx-auto w-full flex justify-between items-center gap-2">
+                                <button onClick={handlePrev} disabled={currentIndex === 0} className={`p-2.5 rounded-full transition active:scale-90 ${currentIndex === 0 ? 'opacity-0' : (darkMode ? 'bg-stone-800' : 'bg-stone-100 text-stone-400')}`}><Icons.ChevronLeft size={22} /></button>
 
-                                {/* Font Adjustments */}
                                 {!zenMode && (
-                                    <div className="flex bg-stone-100 dark:bg-stone-800 p-0.5 md:p-1 rounded-xl">
-                                        <button onClick={() => setFontSize(Math.max(16, fontSize - 2))} className={`px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm font-bold border-r border-stone-200 dark:border-stone-700 ${darkMode ? 'text-stone-300' : 'text-stone-700'} active:bg-stone-200 dark:active:bg-stone-700 transition-colors`}>A-</button>
-                                        <button onClick={() => setFontSize(Math.min(32, fontSize + 2))} className={`px-4 md:px-6 py-1.5 md:py-2 text-xs md:text-sm font-bold ${darkMode ? 'text-stone-300' : 'text-stone-700'} active:bg-stone-200 dark:active:bg-stone-700 transition-colors`}>A+</button>
+                                    <div className="flex bg-stone-50/80 dark:bg-stone-800/40 p-0.5 rounded-xl border border-stone-100 dark:border-stone-700/50">
+                                        <button onClick={() => setFontSize(Math.max(16, fontSize - 2))} className={`px-5 py-1.5 text-xs font-bold border-r border-stone-200 dark:border-stone-700 ${darkMode ? 'text-stone-300' : 'text-stone-500'} active:bg-stone-200`}>A-</button>
+                                        <button onClick={() => setFontSize(Math.min(32, fontSize + 2))} className={`px-5 py-1.5 text-xs font-bold ${darkMode ? 'text-stone-300' : 'text-stone-500'} active:bg-stone-200`}>A+</button>
                                     </div>
                                 )}
 
-                                {/* Next Button */}
-                                <button onClick={handleNext} disabled={currentIndex === sutraData.length - 1} className={`flex items-center justify-center min-w-[100px] md:min-w-[140px] px-6 md:px-10 py-2.5 md:py-3 rounded-full transition font-bold active:scale-95 shadow-md ${currentIndex === sutraData.length - 1 ? 'opacity-0 pointer-events-none' : 'bg-amber-700 text-white'}`}>
-                                    <span className="text-sm md:text-base">{currentChapterId === 32 ? '圓滿' : '下一品'}</span>
+                                <button onClick={handleNext} disabled={currentIndex === sutraData.length - 1} className={`flex items-center justify-center min-w-[100px] px-6 py-2.5 rounded-full transition font-bold active:scale-95 shadow-md ${currentIndex === sutraData.length - 1 ? 'opacity-0' : 'bg-amber-700 text-white'}`}>
+                                    <span className="text-sm">{currentChapterId === 32 ? '圓滿' : '下一品'}</span>
                                 </button>
                             </div>
                         </div>
